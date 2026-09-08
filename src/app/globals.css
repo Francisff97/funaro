@@ -1,0 +1,71 @@
+@import "tailwindcss";
+
+@theme {
+  --color-paper: #f4eee2;
+  --color-paper-2: #ece4d3;
+  --color-carbone: #191512;
+  --color-carbone-2: #211c17;
+  --color-gold: #b5793c;
+  --color-gold-2: #c9a25e;
+  --color-ink: #2a241d;
+  --color-ink-muted: #6f6656;
+  --color-cream: #f0e9dc;
+  --color-cream-muted: #b9ac96;
+
+  --font-display: var(--font-cormorant);
+  --font-body: var(--font-garamond);
+  --font-label: var(--font-jost);
+}
+
+:root { color-scheme: light; }
+
+body {
+  background: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-body);
+  font-size: 1.0625rem;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3 { font-family: var(--font-display); font-weight: 500; line-height: 1.08; }
+
+/* etichette maiuscole spaziate (LABEL) */
+.eyebrow {
+  font-family: var(--font-label);
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  font-size: 0.72rem;
+  font-weight: 500;
+  color: var(--color-gold);
+}
+
+.btn {
+  font-family: var(--font-label);
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  font-size: 0.72rem;
+  padding: 0.9rem 2rem;
+  display: inline-flex; align-items: center; gap: .5rem;
+  transition: all .25s ease;
+}
+.btn-gold { background: var(--color-gold); color: #fff; }
+.btn-gold:hover { background: #a06a33; }
+.btn-dark { background: var(--color-carbone); color: var(--color-cream); }
+.btn-dark:hover { background: #000; }
+
+.nav-link {
+  font-family: var(--font-label);
+  text-transform: uppercase; letter-spacing: 0.14em;
+  font-size: 0.74rem; font-weight: 500;
+}
+
+::selection { background: var(--color-gold); color: #fff; }
+/* Effetto vetro */
+.bew{
+  background: rgba(255, 255, 255, 0.7) !important;
+  border-radius: 16px !important;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2) !important;
+  backdrop-filter: blur(8.5px) !important;
+  -webkit-backdrop-filter: blur(8.5px) !important;
+}
