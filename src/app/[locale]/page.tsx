@@ -74,7 +74,7 @@ export default async function Home({ params }: Props) {
 
       {/* AMENITIES BAR */}
       <Section dark>
-        <Container className="py-5 flex flex-wrap gap-x-6 gap-y-2 justify-center text-sm text-cream-muted font-label">
+        <Container className="py-5 flex flex-wrap gap-x-6 gap-y-2 justify-center text-[1rem] text-cream-muted font-label">
           {amenities.map((a) => (
             <span key={a} className="flex items-center gap-2">
               <span className="w-1 h-1 rounded-full bg-gold" /> {a}
@@ -158,16 +158,15 @@ export default async function Home({ params }: Props) {
               <Reveal key={o.title} delay={i * 0.1}>
                 <div className={`p-10 h-full ${i === 0 ? 'bg-carbone text-cream' : ''}`}>
                   <p className="eyebrow mb-4">{o.min}</p>
-                  <span className="inline-block bg-gold text-white text-sm px-4 py-1 mb-5">{o.badge}</span>
+                  <span className="inline-block bg-gold text-white text-[1rem] px-4 py-1 mb-5">{o.badge}</span>
                   <h3 className="text-2xl italic mb-3">{o.title}</h3>
-                  <p className={`text-sm mb-6 ${i === 0 ? 'text-cream-muted' : 'text-ink-muted'}`}>{o.text}</p>
+                  <p className={`text-[1rem] mb-6 ${i === 0 ? 'text-cream-muted' : 'text-ink-muted'}`}>{o.text}</p>
                   <Link href="/contatti" className="btn btn-gold">{to('getOffer')}</Link>
                 </div>
               </Reveal>
             ))}
           </div>
         </Container>
-        <BookingWidget />
       </Section>
     </>
   );

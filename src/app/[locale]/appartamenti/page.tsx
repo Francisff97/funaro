@@ -59,7 +59,7 @@ const services = t.raw('services') as string[];
       </Section>
       {/* SERVIZI BAR */}
 <Section dark>
-  <Container className="py-5 flex flex-wrap gap-x-5 gap-y-2 justify-center text-sm text-cream-muted font-label">
+  <Container className="py-5 flex flex-wrap gap-x-5 gap-y-2 justify-center text-[1rem] text-cream-muted font-label">
     <span className="text-gold mr-2">{t('servicesLabel')}:</span>
     {services.map((s) => <span key={s}>· {s}</span>)}
   </Container>
@@ -106,7 +106,7 @@ const services = t.raw('services') as string[];
             {faqs.map((f) => (
               <div key={f.q} className="border-b border-ink/15 pb-6">
                 <h3 className="text-xl mb-2">{f.q}</h3>
-                <p className="text-ink-muted text-sm">{f.a}</p>
+                <p className="text-ink-muted text-[1.125rem]">{f.a}</p>
               </div>
             ))}
           </div>

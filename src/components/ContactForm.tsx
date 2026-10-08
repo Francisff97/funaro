@@ -34,7 +34,7 @@ export default function ContactForm() {
         <input type="checkbox" name="privacy" required className="mt-1" />
         <span>{t('privacy')}</span>
       </label>
-      <button type="submit" className="btn btn-dark w-full">{t('submit')}</button>
+      <button type="submit" className="btn btn-dark ">{t('submit')}</button>
     </form>
   );
 }

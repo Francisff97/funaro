@@ -48,7 +48,7 @@ export default async function Offers({ params }: Props) {
                 <p className="eyebrow mb-4">{o.min}</p>
                 <span className="inline-block bg-gold text-white text-sm px-4 py-1 mb-5">{o.badge}</span>
                 <h3 className="text-2xl italic mb-3">{o.title}</h3>
-                <p className={`text-sm mb-6 ${i === 0 ? 'text-cream-muted' : 'text-ink-muted'}`}>{o.text}</p>
+                <p className={`text-[1rem] mb-6 ${i === 0 ? 'text-cream-muted' : 'text-ink-muted'}`}>{o.text}</p>
                 <Link href="/contatti" className="btn btn-gold">{t('getOffer')}</Link>
               </div>
             ))}
@@ -64,8 +64,8 @@ export default async function Offers({ params }: Props) {
             {steps.map((s) => (
               <div key={s.n} className="p-8 border-b md:border-b-0 md:border-r last:border-r-0 border-ink/15">
                 <p className="font-display text-4xl text-ink-muted mb-3">{s.n}</p>
-                <h3 className="text-lg mb-2">{s.title}</h3>
-                <p className="text-ink-muted text-sm">{s.text}</p>
+                <h3 className="text-xl mb-2">{s.title}</h3>
+                <p className="text-ink-muted text-[1rem]">{s.text}</p>
               </div>
             ))}
           </div>
