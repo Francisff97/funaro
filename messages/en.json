@@ -126,7 +126,9 @@
       "phone": "Phone", "checkin": "Arrival date", "checkout": "Departure date",
       "message": "Message", "messagePh": "Tell us more about your stay…",
       "privacy": "I have read and accept the privacy policy under Regulation (EU) 679/2016 (GDPR).",
-      "submit": "Send request", "thanks": "Thank you! We'll reply within 24 hours."
+      "submit": "Send request", "thanks": "Thank you! We'll reply within 24 hours.",
+      "sending": "Sending…",
+"error": "Something went wrong. Please try again or email us at info@dimoradelfunaro.it."
     }
   },
   "seo": {
