@@ -19,7 +19,7 @@ export default function MobileMenu({
             <Link key={i.href} href={i.href} onClick={() => setOpen(false)}
               className="nav-link text-ink text-lg">{i.label}</Link>
           ))}
-          <Link href="/contatti" onClick={() => setOpen(false)} className="btn btn-dark mt-4">
+          <Link href="/contatti" onClick={() => setOpen(false)} className="btn btn-dark mt-4 w-40 p-xl">
             {bookLabel}
           </Link>
         </div>
