@@ -126,7 +126,9 @@
       "phone": "Telefono", "checkin": "Data arrivo", "checkout": "Data partenza",
       "message": "Messaggio", "messagePh": "Raccontaci qualcosa di più sul tuo soggiorno…",
       "privacy": "Ho letto e accetto l'informativa sulla privacy secondo il Regolamento (UE) 679/2016 (GDPR).",
-      "submit": "Invia richiesta", "thanks": "Grazie! Ti risponderemo entro 24 ore."
+      "submit": "Invia richiesta", "thanks": "Grazie! Ti risponderemo entro 24 ore.",
+      "sending": "Invio in corso…",
+"error": "Qualcosa è andato storto. Riprova o scrivici direttamente a info@dimoradelfunaro.it."
     }
   },
   "seo": {
