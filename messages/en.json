@@ -137,5 +137,10 @@
     "about": { "title": "About · Dimora del Funaro Orvieto", "description": "A home in the medieval centre of Orvieto, run by Catia with the same care as the B&B Torre Polidori. Authentic hospitality in the San Giovanni district." },
     "offers": { "title": "Offers · Dimora del Funaro Orvieto", "description": "The longer you stay, the more you save: up to 10% off longer stays. Lowest price online by booking directly, no commissions." },
     "contact": { "title": "Contact & booking · Dimora del Funaro Orvieto", "description": "Book Dimora del Funaro in Orvieto directly. Phone, WhatsApp and contact form. Reply within 24 hours." }
+  },
+  "mobileBar": {
+    "call": "Call",
+    "write": "Write",
+    "map": "Map"
   }
 }

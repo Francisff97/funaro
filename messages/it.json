@@ -137,5 +137,10 @@
     "about": { "title": "Chi siamo · Dimora del Funaro Orvieto", "description": "Una casa nel centro medievale di Orvieto, gestita da Catia con la stessa cura del B&B Torre Polidori. Accoglienza autentica nel quartiere di San Giovanni." },
     "offers": { "title": "Offerte · Dimora del Funaro Orvieto", "description": "Più resti, più risparmi: fino al 10% di sconto sui soggiorni lunghi. Prezzo più basso online prenotando direttamente, senza commissioni." },
     "contact": { "title": "Contatti e prenotazione · Dimora del Funaro Orvieto", "description": "Prenota direttamente Dimora del Funaro a Orvieto. Telefono, WhatsApp e modulo di contatto. Risposta entro 24 ore." }
+  },
+  "mobileBar": {
+    "call": "Chiama",
+    "write": "Scrivi",
+    "map": "Mappa"
   }
 }
