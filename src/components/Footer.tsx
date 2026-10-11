@@ -34,7 +34,7 @@ export default async function Footer() {
       <div className="border-t border-white/10 pb-[60px]">
         <div className="mx-auto max-w-6xl px-6 md:px-10 py-5 flex flex-col md:flex-row justify-between gap-2 text-[16px] text-cream-muted">
           <span>{SITE.name} · Orvieto · {t('ownedBy')} · CIN: IT055023C101017655</span>
-          <<Link href="/privacy-policy">{t('privacy')}</Link>
+          <Link href="/privacy-policy">{t('privacy')}</Link>
         </div>
       </div>
       <MobileActionBar />
