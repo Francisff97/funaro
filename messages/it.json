@@ -5,7 +5,7 @@
     "heroEyebrow": "Dimora del Funaro · Orvieto",
     "heroTitle": "Il tuo appartamento privato nel", "heroTitleAccent": "cuore medievale", "heroTitleEnd": "di Orvieto",
     "heroText": "Non una camera d'albergo. Un intero appartamento tutto per te — con cucina attrezzata, terrazzo privato e la libertà di sentirti davvero a casa.",
-    "heroCta": "Scopri le camere",
+    "heroCta": "Scopri l'appartamento",
     "heroAlt": "Vista su Orvieto e sulla campagna umbra dalla finestra dell'appartamento",
     "introEyebrow": "L'appartamento",
     "introTitle": "Tutto lo spazio di casa. Tutto il fascino della", "introTitleAccent": "storia",
@@ -125,7 +125,7 @@
       "lastName": "Cognome", "lastNamePh": "Il tuo cognome",
       "phone": "Telefono", "checkin": "Data arrivo", "checkout": "Data partenza",
       "message": "Messaggio", "messagePh": "Raccontaci qualcosa di più sul tuo soggiorno…",
-      "privacy": "Ho letto e accetto l'informativa sulla privacy secondo il Regolamento (UE) 679/2016 (GDPR).",
+      "privacy": "Ho letto e accetto l’<link>informativa sulla privacy</link> secondo il Regolamento (UE) 2016/679 (GDPR).",
       "submit": "Invia richiesta", "thanks": "Grazie! Ti risponderemo entro 24 ore.",
       "sending": "Invio in corso…",
 "error": "Qualcosa è andato storto. Riprova o scrivici direttamente a info@dimoradelfunaro.it."
@@ -142,5 +142,13 @@
     "call": "Chiama",
     "write": "Scrivi",
     "map": "Mappa"
-  }
+  },
+  "privacy": {
+  "meta": {
+    "title": "Privacy e Cookie Policy · Dimora del Funaro",
+    "description": "Informativa sul trattamento dei dati personali e sui cookie del sito di Dimora del Funaro a Orvieto."
+  },
+  "eyebrow": "Informativa",
+  "title": "Privacy e Cookie Policy"
+}
 }
