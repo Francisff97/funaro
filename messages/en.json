@@ -125,7 +125,7 @@
       "lastName": "Last name", "lastNamePh": "Your last name",
       "phone": "Phone", "checkin": "Arrival date", "checkout": "Departure date",
       "message": "Message", "messagePh": "Tell us more about your stay…",
-      "privacy": "I have read and accept the privacy policy under Regulation (EU) 679/2016 (GDPR).",
+      "privacy": "I have read and accept the <link>privacy policy</link> under Regulation (EU) 2016/679 (GDPR).",
       "submit": "Send request", "thanks": "Thank you! We'll reply within 24 hours.",
       "sending": "Sending…",
 "error": "Something went wrong. Please try again or email us at info@dimoradelfunaro.it."
@@ -142,5 +142,13 @@
     "call": "Call",
     "write": "Write",
     "map": "Map"
-  }
+  },
+  "privacy": {
+  "meta": {
+    "title": "Privacy & Cookie Policy · Dimora del Funaro",
+    "description": "How Dimora del Funaro in Orvieto processes personal data and uses cookies on this website."
+  },
+  "eyebrow": "Legal",
+  "title": "Privacy & Cookie Policy"
+}
 }

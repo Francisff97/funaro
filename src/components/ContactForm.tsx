@@ -1,5 +1,6 @@
 'use client';
 import { useState } from 'react';
+import { Link } from '@/i18n/navigation';
 import { useTranslations } from 'next-intl';
 
 type Status = 'idle' | 'sending' | 'sent' | 'error';
@@ -47,11 +48,35 @@ export default function ContactForm() {
         <div><label htmlFor="cf-in" className={lbl}>{t('checkin')}</label><input id="cf-in" name="checkin" type="date" className={field} value={checkin} onChange={(e) => setCheckin(e.target.value)} /></div>
         <div><label htmlFor="cf-out" className={lbl}>{t('checkout')}</label><input id="cf-out" name="checkout" type="date" className={field} min={checkin || undefined} /></div>
       </div>
-      <div><label htmlFor="cf-msg" className={lbl}>{t('message')}</label><textarea id="cf-msg" name="message" rows={3} maxLength={4000} className={field} placeholder={t('messagePh')} /></div>
-      <label className="flex items-start gap-3 text-xs text-ink-muted">
-        <input type="checkbox" name="privacy" required className="mt-1" />
-        <span>{t('privacy')}</span>
-      </label>
+      <div>
+  <label htmlFor="cf-msg" className={lbl}>{t('message')}</label>
+  <textarea
+    id="cf-msg"
+    name="message"
+    rows={3}
+    maxLength={4000}
+    className={field}
+    placeholder={t('messagePh')}
+  />
+</div>
+
+<div className="flex items-start gap-3 text-xs text-ink-muted">
+  <input id="cf-privacy" type="checkbox" name="privacy" required className="mt-1" />
+  <label htmlFor="cf-privacy">
+    {t.rich('privacy', {
+      link: (chunks) => (
+        <Link
+          href="/privacy-policy"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="underline underline-offset-2 hover:text-ink"
+        >
+          {chunks}
+        </Link>
+      ),
+    })}
+  </label>
+</div>
 
       {status === 'error' && (
         <p className="text-sm text-red-700" role="alert">{t('error')}</p>
