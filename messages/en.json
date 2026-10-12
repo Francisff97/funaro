@@ -1,5 +1,12 @@
 {
   "nav": { "apartment": "Apartment", "about": "About", "offers": "Offers", "contact": "Contact", "book": "Book now" },
+  "notFound": {
+  "eyebrow": "Error 404",
+  "title": "Page not found",
+  "text": "The page you're looking for doesn't exist or has been moved. Head back home or have a look at the apartment.",
+  "home": "Back to home",
+  "apartment": "See the apartment"
+},
   "footer": { "explore": "Explore", "privacy": "Privacy & Cookie Policy", "alsoCatia": "Also by Catia", "ownedBy": "A property by Catia" },
   "home": {
     "heroEyebrow": "Dimora del Funaro · Orvieto",
