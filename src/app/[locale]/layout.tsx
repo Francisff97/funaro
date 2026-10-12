@@ -45,11 +45,27 @@ export default async function LocaleLayout({
           <Footer />
           <WhatsAppButton />
         </NextIntlClientProvider>
-       <Script
-  id="iubenda-widget"
-  src="https://embeds.iubenda.com/widgets/3b05437a-3e98-4a75-a756-bbb5985b921b.js"
-  strategy="afterInteractive"
-/>
+       <Script id="iubenda-config" strategy="beforeInteractive">
+  {`
+    var _iub = _iub || [];
+    _iub.csConfiguration = {
+      "siteId": SITE_ID,
+      "cookiePolicyId": COOKIE_POLICY_ID,
+      "lang": "${locale}",
+      "storage": { "useSiteId": true },
+      "banner": {
+        "acceptButtonDisplay": true,
+        "customizeButtonDisplay": true,
+        "position": "float-bottom-right",
+        "acceptButtonColor": "#ffffff",
+        "acceptButtonCaptionColor": "#000000"
+      },
+      "skipSaveConsent": false,
+      "perPurposeConsent": true
+    };
+  `}
+</Script>
+<Script src="https://cdn.iubenda.com/cs/iubenda_cs.js" strategy="lazyOnload" />
       </body>
     </html>
   );
