@@ -9,6 +9,7 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import WhatsAppButton from '@/components/WhatsAppButton';
 import '../globals.css';
+import Script from 'next/script'
 
 const cormorant = Cormorant_Garamond({ subsets: ['latin'], weight: ['400','500','600'], variable: '--font-cormorant', display: 'swap' });
 const garamond = EB_Garamond({ subsets: ['latin'], weight: ['400','500'], style: ['normal','italic'], variable: '--font-garamond', display: 'swap' });
@@ -44,6 +45,11 @@ export default async function LocaleLayout({
           <Footer />
           <WhatsAppButton />
         </NextIntlClientProvider>
+       <Script
+  id="iubenda-widget"
+  src="https://embeds.iubenda.com/widgets/3b05437a-3e98-4a75-a756-bbb5985b921b.js"
+  strategy="afterInteractive"
+/>
       </body>
     </html>
   );
