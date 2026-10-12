@@ -19,7 +19,7 @@ export async function MobileActionBar() {
   const label = 'font-display text-sm italic';
 
   return (
-    <nav className="fixed inset-x-0 bottom-0 z-40 grid grid-cols-3 bg-carbone text-gold md:hidden border-gold/20 shadow-[0_0_40px_#00000020]">
+    <nav className="fixed inset-x-0 bottom-0 z-40 grid grid-cols-3 bg-carbone text-gold min-[48rem]:hidden border-gold/20 shadow-[0_0_40px_#00000020]">
       <a href={`tel:${PHONE}`} className={`${cell} border-r border-cream/15`}>
         <svg viewBox="0 0 24 24" className={svg} {...stroke}>
           <path d="M6.5 3.5h-2A1.5 1.5 0 0 0 3 5c0 8.28 6.72 15 15 15a1.5 1.5 0 0 0 1.5-1.5v-2a1 1 0 0 0-.68-.95l-3-1a1 1 0 0 0-1.05.24l-1.1 1.1a12 12 0 0 1-5.3-5.3l1.1-1.1a1 1 0 0 0 .24-1.05l-1-3a1 1 0 0 0-.95-.68z" />
