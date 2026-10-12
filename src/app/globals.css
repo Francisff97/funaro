@@ -11,7 +11,7 @@
   --color-ink-muted: #6f6656;
   --color-cream: #f0e9dc;
   --color-cream-muted: #b9ac96;
-
+  --breakpoint-md: 64rem;
   --font-display: var(--font-cormorant);
   --font-body: var(--font-garamond);
   --font-label: var(--font-jost);
