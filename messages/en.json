@@ -112,7 +112,7 @@
     "howTitle": "Three steps to the best price",
     "steps": [
       { "n": "01", "title": "Choose your dates", "text": "Pick your stay. At least 3 or 5 nights to unlock the offers." },
-      { "n": "02", "title": "Book here", "text": "Fill in the form or message us on WhatsApp. The discount is applied automatically to the total." },
+      { "n": "02", "title": "Book here", "text": "Fill in the form or message us on WhatsApp: we’ll send you a quote with the discount already applied." },
       { "n": "03", "title": "Confirm and come", "text": "Get confirmation within 24 hours. Pay on site or via online payment link." }
     ]
   },
