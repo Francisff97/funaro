@@ -1,5 +1,12 @@
 {
   "nav": { "apartment": "Appartamenti", "about": "Chi siamo", "offers": "Offerte", "contact": "Contatti", "book": "Prenota ora" },
+  "notFound": {
+  "eyebrow": "Errore 404",
+  "title": "Pagina non trovata",
+  "text": "La pagina che cerchi non esiste o è stata spostata. Torna alla home o scopri l’appartamento.",
+  "home": "Torna alla home",
+  "apartment": "Scopri l’appartamento"
+},
   "footer": { "explore": "Esplora", "privacy": "Privacy & Cookie Policy", "alsoCatia": "Anche di Catia", "ownedBy": "Una proprietà di Catia" },
   "home": {
     "heroEyebrow": "Dimora del Funaro · Orvieto",
