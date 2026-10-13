@@ -212,11 +212,10 @@ export function PrivacyIt() {
 
       {HAS_GOOGLE_MAPS_EMBED && (
         <P>
-          Nella pagina Contatti è incorporata una mappa fornita dal servizio Google Maps (Google Ireland Limited). La
+          Nella pagina Contatti è disponibile una mappa fornita dal servizio Google Maps (Google Ireland Limited). La mappa viene caricata solo dopo un clic esplicito dell’utente sul pulsante «Mostra la mappa»: prima di allora non viene trasmesso alcun dato a Google. La
           visualizzazione della mappa può comportare l’installazione di cookie di terze parti da parte di Google, che
           li gestisce secondo la propria informativa, consultabile all’indirizzo{' '}
-          <A href="https://policies.google.com/privacy">policies.google.com/privacy</A>. In alternativa alla mappa
-          incorporata, l’indirizzo della struttura è indicato in chiaro nella stessa pagina.
+          <A href="https://policies.google.com/privacy">policies.google.com/privacy</A>. In alternativa, l’indirizzo della struttura è indicato in chiaro nella stessa pagina, insieme a un link per aprirlo direttamente in Google Maps.
         </P>
       )}
 
