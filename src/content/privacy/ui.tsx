@@ -7,7 +7,7 @@ import type { ReactNode } from 'react';
  * false (predefinito): non compare la sezione su Google Analytics.
  * Se un giorno lo aggiungi, servono anche il banner e il consenso.
  */
-export const HAS_GOOGLE_ANALYTICS = false;
+export const HAS_GOOGLE_ANALYTICS = true;
 
 /**
  * La pagina Contatti incorpora una mappa di Google Maps (iframe)?
