@@ -199,10 +199,9 @@ export function PrivacyEn() {
 
       {HAS_GOOGLE_MAPS_EMBED && (
         <P>
-          The Contact page includes an embedded map provided by Google Maps (Google Ireland Limited). Displaying the
+          The Contact page offers a map provided by Google Maps (Google Ireland Limited). The map is loaded only after the user explicitly clicks the “Show the map” button: until then, no data is sent to Google. Displaying the
           map may cause Google to set third-party cookies, which Google manages under its own privacy policy,
-          available at <A href="https://policies.google.com/privacy">policies.google.com/privacy</A>. As an
-          alternative to the embedded map, the property’s address is shown in full on the same page.
+          available at <A href="https://policies.google.com/privacy">policies.google.com/privacy</A>. Alternatively, the property’s address is shown in full on the same page, together with a link to open it directly in Google Maps.
         </P>
       )}
 
