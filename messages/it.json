@@ -7,7 +7,7 @@
   "home": "Torna alla home",
   "apartment": "Scopri l’appartamento"
 },
-  "footer": { "explore": "Esplora", "privacy": "Privacy & Cookie Policy", "alsoCatia": "Anche di Catia", "ownedBy": "Una proprietà di Catia" },
+  "footer": { "explore": "Esplora", "cookiePrefs": "Preferenze cookie", "privacy": "Privacy & Cookie Policy", "alsoCatia": "Anche di Catia", "ownedBy": "Una proprietà di Catia" },
   "home": {
     "heroEyebrow": "Dimora del Funaro · Orvieto",
     "heroTitle": "Il tuo appartamento privato nel", "heroTitleAccent": "cuore medievale", "heroTitleEnd": "di Orvieto",

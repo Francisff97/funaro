@@ -37,8 +37,8 @@ export function PrivacyEn() {
       </P>
       <P>
         This notice is also provided in accordance with the Italian Data Protection Authority’s cookie measure no. 229
-        of 8 May 2014, in order to inform visitors about the use of the data they enter and of the cookies used by the
-        website.
+        of 8 May 2014 and its Guidelines on cookies and other tracking tools of 10 June 2021, in order to inform
+        visitors about the use of the data they enter and of the cookies used by the website.
       </P>
       <P>
         This notice applies only to the website {SITE} and not to other websites the user may visit through links
@@ -68,6 +68,8 @@ export function PrivacyEn() {
       <P>
         The controller processes personal identification data (for example: first name, last name, address, email and
         telephone number) when a contract with the accommodation is concluded or when information is requested.
+        {HAS_GOOGLE_ANALYTICS &&
+          ' Subject to the user’s consent, browsing data is also processed in aggregate and pseudonymised form (for example pages visited, length of visit, device and browser type, approximate geographic origin).'}
       </P>
 
       <H2>4) Purposes and legal basis of processing</H2>
@@ -99,8 +101,18 @@ export function PrivacyEn() {
           the box confirming you have read the privacy notice), the property will contact you by email or telephone.
           The optional, explicit and voluntary sending of emails to the addresses shown on this website entails the
           subsequent acquisition of the sender’s address, which is needed to reply to requests, as well as of any
-          other personal data included in the message.
+          other personal data included in the message
+          {HAS_GOOGLE_ANALYTICS ? ';' : '.'}
         </li>
+        {HAS_GOOGLE_ANALYTICS && (
+          <li>
+            for statistical purposes, i.e. to measure the use of the website in aggregate form (pages visited, clicks
+            on contact details, form submissions) and improve its content. This processing takes place only with your
+            consent (Article 6(1)(a) of Regulation (EU) 2016/679), given through the cookie banner, which can be
+            withdrawn at any time via the “Cookie preferences” link at the bottom of every page. Refusing consent has
+            no effect on your ability to browse the website or contact the property.
+          </li>
+        )}
       </OL>
 
       <H2>5) Processing methods</H2>
@@ -122,7 +134,16 @@ export function PrivacyEn() {
           for purpose no. 3: will be kept by the external processors (tax and accounting consultant) for the periods
           required by the relevant laws (10 years, or longer in the event of tax audits);
         </li>
-        <li>for purpose no. 4: will be kept for as long as strictly necessary to provide the information requested.</li>
+        <li>
+          for purpose no. 4: will be kept for as long as strictly necessary to provide the information requested
+          {HAS_GOOGLE_ANALYTICS ? ';' : '.'}
+        </li>
+        {HAS_GOOGLE_ANALYTICS && (
+          <li>
+            for purpose no. 5: statistical data is kept in Google Analytics for a maximum of 14 months, after which it
+            is automatically deleted.
+          </li>
+        )}
       </UL>
       <P>
         In any case, data will be deleted at the data subject’s request, subject to any further retention obligations
@@ -130,10 +151,24 @@ export function PrivacyEn() {
       </P>
 
       <H2>7) Access to data</H2>
-      <P>Your data may be accessed by external consultants, credit institutions and supervisory and control authorities.</P>
+      <P>
+        Your data may be accessed by external consultants, credit institutions and supervisory and control authorities.
+        {HAS_GOOGLE_ANALYTICS &&
+          ' Statistical data is processed by Google Ireland Limited, acting as data processor, for the Google Analytics service; cookie consent is managed through iubenda S.r.l.'}
+      </P>
 
       <H2>8) Data transfers</H2>
-      <P>The data controller does not transfer personal data to third countries or international organisations.</P>
+      {HAS_GOOGLE_ANALYTICS ? (
+        <P>
+          The data controller does not directly transfer personal data to third countries or international
+          organisations. Limited to statistical data collected through Google Analytics, and only with the user’s
+          consent, data may also be processed by Google LLC in the United States. Such transfer is based on the
+          European Commission’s adequacy decision for the EU-U.S. Data Privacy Framework, to which Google LLC is
+          certified, and on Standard Contractual Clauses.
+        </P>
+      ) : (
+        <P>The data controller does not transfer personal data to third countries or international organisations.</P>
+      )}
 
       <H2>9) Rights of the data subject</H2>
       <P>
@@ -164,7 +199,13 @@ export function PrivacyEn() {
           manifestly disproportionate effort compared with the right being protected.
         </li>
       </UL>
-      <P>The data subject has the right to object to processing under the terms and conditions set out in the provisions above.</P>
+      <P>
+        The data subject has the right to object to processing under the terms and conditions set out in the
+        provisions above
+        {HAS_GOOGLE_ANALYTICS
+          ? ' and to withdraw consent at any time, without affecting the lawfulness of processing based on consent before its withdrawal. They also have the right to lodge a complaint with the Italian Data Protection Authority (www.garanteprivacy.it).'
+          : '.'}
+      </P>
 
       <H2>10) Changes to this notice</H2>
       <P>
@@ -197,17 +238,41 @@ export function PrivacyEn() {
         profiling cookies.
       </P>
 
+      {HAS_GOOGLE_ANALYTICS && (
+        <P>
+          Technical cookies include the one set by iubenda, the platform the website uses to collect and record the
+          user’s cookie preferences: its only purpose is to remember the choice made in the banner, so that it is not
+          shown again on every visit.
+        </P>
+      )}
+
       {HAS_GOOGLE_MAPS_EMBED && (
         <P>
-          The Contact page offers a map provided by Google Maps (Google Ireland Limited). The map is loaded only after the user explicitly clicks the “Show the map” button: until then, no data is sent to Google. Displaying the
+          The Contact page offers a map provided by Google Maps (Google Ireland Limited). The map is loaded only after
+          the user explicitly clicks the “Show the map” button: until then, no data is sent to Google. Displaying the
           map may cause Google to set third-party cookies, which Google manages under its own privacy policy,
-          available at <A href="https://policies.google.com/privacy">policies.google.com/privacy</A>. Alternatively, the property’s address is shown in full on the same page, together with a link to open it directly in Google Maps.
+          available at <A href="https://policies.google.com/privacy">policies.google.com/privacy</A>. Alternatively,
+          the property’s address is shown in full on the same page, together with a link to open it directly in
+          Google Maps.
         </P>
       )}
 
       {HAS_GOOGLE_ANALYTICS && (
         <>
-          <P>The website also uses third-party statistical cookies:</P>
+          <H3>Statistical cookies (only with consent)</H3>
+          <P>
+            Subject to the user’s consent, the website uses Google Analytics 4, a web analytics service provided by
+            Google Ireland Limited, enabled through Google Tag Manager. Google Analytics collects information in
+            aggregate and pseudonymised form about the use of the website (for example pages visited, length of visit,
+            clicks on telephone, email, WhatsApp and map links, contact form submissions), which the controller uses
+            solely for statistical purposes and to improve the website. Google Analytics 4 does not log or store
+            users’ IP addresses; Google Signals and data sharing for advertising purposes are disabled.
+          </P>
+          <P>
+            Until the user gives consent through the banner, Google Analytics cookies are not set and no statistical
+            data is sent to Google. Consent is managed through iubenda and Google Consent Mode, and can be changed or
+            withdrawn at any time via the “Cookie preferences” link at the bottom of every page.
+          </P>
           <div className="mt-6 overflow-x-auto">
             <table className="w-full border-collapse text-left text-sm text-ink-muted">
               <thead>
@@ -220,25 +285,30 @@ export function PrivacyEn() {
               </thead>
               <tbody>
                 <tr className="border-b border-ink/10">
+                  <td className="py-2 pr-4">_iub_cs-*</td>
+                  <td className="py-2 pr-4">Technical</td>
+                  <td className="py-2 pr-4">up to 12 months</td>
+                  <td className="py-2">iubenda: stores the user’s cookie preferences</td>
+                </tr>
+                <tr className="border-b border-ink/10">
                   <td className="py-2 pr-4">_ga</td>
                   <td className="py-2 pr-4">Statistical (third party)</td>
                   <td className="py-2 pr-4">2 years</td>
-                  <td className="py-2">Google Analytics</td>
+                  <td className="py-2">Google Analytics: distinguishes users in pseudonymised form</td>
                 </tr>
                 <tr className="border-b border-ink/10">
-                  <td className="py-2 pr-4">_gat</td>
+                  <td className="py-2 pr-4">_ga_*</td>
                   <td className="py-2 pr-4">Statistical (third party)</td>
-                  <td className="py-2 pr-4">1 minute</td>
-                  <td className="py-2">Google Analytics</td>
+                  <td className="py-2 pr-4">2 years</td>
+                  <td className="py-2">Google Analytics: maintains session state</td>
                 </tr>
               </tbody>
             </table>
           </div>
           <P>
-            This website uses Google Analytics, a web analytics service provided by Google. The information generated
-            by the cookie about the use of the website (including the anonymised IP address) will be transmitted to and
-            stored on Google’s servers, which will use it to evaluate the use of the website and compile reports on
-            website activity for its operators.
+            Google’s privacy policy: <A href="https://policies.google.com/privacy">policies.google.com/privacy</A>.
+            Browser add-on to opt out of Google Analytics:{' '}
+            <A href="https://tools.google.com/dlpage/gaoptout">tools.google.com/dlpage/gaoptout</A>.
           </P>
         </>
       )}
@@ -247,11 +317,17 @@ export function PrivacyEn() {
       <P>Processing is carried out by the controller using automated tools. No disclosure or communication takes place.</P>
 
       <H3>Disabling cookies</H3>
+      {HAS_GOOGLE_ANALYTICS && (
+        <P>
+          Users can change or withdraw their consent to statistical cookies at any time via the “Cookie preferences”
+          link at the bottom of every page of the website.
+        </P>
+      )}
       <P>
-        Users can manage their cookie preferences directly in their browser and, for example, prevent third parties
-        from installing them. Browser settings also allow users to delete cookies installed in the past. Please note
-        that disabling all cookies may affect how this website works. Each browser has its own procedure for managing
-        settings; specific instructions are available through the links below:
+        Users can also manage their cookie preferences directly in their browser and, for example, prevent third
+        parties from installing them. Browser settings also allow users to delete cookies installed in the past.
+        Please note that disabling all cookies may affect how this website works. Each browser has its own procedure
+        for managing settings; specific instructions are available through the links below:
       </P>
       <UL>
         {BROWSER_LINKS.map((b) => (
@@ -268,7 +344,7 @@ export function PrivacyEn() {
       </P>
 
       <P>
-        <em>Last updated: 11 October 2026.</em>
+        <em>Last updated: 13 October 2026.</em>
       </P>
     </>
   );
