@@ -37,8 +37,8 @@ export default async function Home({ params }: Props) {
 
       {/* HERO */}
       <section className="relative min-h-[85vh] flex items-end bg-carbone text-cream">
-        <div className="absolute inset-0 bg-[url('/images/hero.jpg')] bg-cover bg-center opacity-75" />
-        <div className="absolute inset-0 bg-gradient-to-t from-carbone via-carbone/40 to-transparent" />
+<div className="absolute inset-0 bg-[url('/images/hero.jpg')] bg-cover bg-center opacity-90" />
+<div className="absolute inset-0 bg-gradient-to-t from-carbone/95 via-carbone/45 via-40% to-transparent to-75%" />
         <Container className="relative z-10 pb-20">
           <p className="eyebrow mb-4">{t('heroEyebrow')}</p>
           <h1 className="text-4xl md:text-6xl max-w-3xl">
