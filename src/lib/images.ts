@@ -17,6 +17,7 @@ export const IMG = {
 export const CAMERE_SRC = [
   '/images/camera-matrimoniale.jpg', // camera matrimoniale
   '/images/camera-castello.jpg',     // camera con letti a castello
+  '/images/letti-singoli-funaro.jpg', // camera letti a castello
   '/images/terrazzo.jpg',            // terrazzo
   '/images/bagno.jpg',               // bagno
 ] as const;
