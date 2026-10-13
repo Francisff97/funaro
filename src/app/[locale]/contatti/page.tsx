@@ -5,6 +5,7 @@ import { SITE, type Locale } from '@/lib/site';
 import { Section, Container } from '@/components/Section';
 import ContactForm from '@/components/ContactForm';
 import JsonLd from '@/components/JsonLd';
+import MapEmbed from '@/components/MapEmbed';
 
 type Props = { params: Promise<{ locale: Locale }> };
 
@@ -55,13 +56,14 @@ export default async function Contact({ params }: Props) {
               <p className="eyebrow mb-4">{t('checkinEyebrow')}</p>
               <p className="whitespace-pre-line text-ink-muted">{t('checkinText')}</p>
             </div>
-            {/* mappa: sostituisci src con l'embed reale di Google Maps */}
-            <iframe
-              title="map"
-              className="w-full h-64 border border-ink/15"
-              loading="lazy"
-              src="https://www.google.com/maps?q=Via+Ripa+Serancia+31+Orvieto&output=embed"
-            />
+          <MapEmbed
+            src="https://www.google.com/maps?q=Via+Ripa+Serancia+31+Orvieto&output=embed"
+            title={t('map.title')}
+            note={t('map.note')}
+            loadLabel={t('map.load')}
+            openLabel={t('map.open')}
+            openHref="https://maps.google.com/?q=Via+Ripa+Serancia+31+Orvieto+TR"
+          />
           </div>
         </Container>
       </Section>
