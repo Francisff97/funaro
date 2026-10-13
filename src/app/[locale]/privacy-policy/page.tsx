@@ -17,6 +17,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: t('title'),
     description: t('description'),
+    openGraph: {
+  title,
+  description,
+  url: `https://www.dimoradelfunaro.it/${locale}/privacy-policy`,
+  images: [{ url: '/images/og.jpg', width: 1200, height: 630 }],
+},
+twitter: { card: 'summary_large_image' },
     alternates: {
       canonical: locale === 'en' ? enUrl : itUrl,
       languages: { it: itUrl, en: enUrl, 'x-default': itUrl },
