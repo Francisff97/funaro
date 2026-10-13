@@ -33,7 +33,7 @@ export default async function Contact({ params }: Props) {
             <p className="mt-6 text-cream-muted max-w-md">{t('heroText')}</p>
           </div>
           <div className="space-y-8">
-            <div><p className="eyebrow mb-1">{t('phoneLabel')}</p><p className="border-b border-white/20 pb-2"><a href={`tel:${SITE.phone}`} className="hover:text-gold">{SITE.phone}</a></p></div>
+            <div><p className="eyebrow mb-1">{t('phoneLabel')}</p><p className="border-b border-white/20 pb-2"><a href={`tel:${SITE.phone.replace(/\s/g, '')}`} className="hover:text-gold">{SITE.phone}</a></p></div>
             <div><p className="eyebrow mb-1">Email</p><p className="border-b border-white/20 pb-2"><a href={`mailto:${SITE.email}`} className="hover:text-gold">{SITE.email}</a></p></div>
             <div><p className="eyebrow mb-1">{t('addressLabel')}</p><p className="border-b border-white/20 pb-2">{SITE.address.street}, {SITE.address.city} ({SITE.address.province})</p></div>
           </div>
