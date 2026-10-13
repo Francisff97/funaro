@@ -11,22 +11,34 @@ type Props = { params: Promise<{ locale: string }> };
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'privacy.meta' });
+
+  const title = t('title');
+  const description = t('description');
   const itUrl = `${SITE_URL}/it/privacy-policy`;
   const enUrl = `${SITE_URL}/en/privacy-policy`;
+  const url = locale === 'en' ? enUrl : itUrl;
 
   return {
-    title: t('title'),
-    description: t('description'),
-    openGraph: {
-  title,
-  description,
-  url: `https://www.dimoradelfunaro.it/${locale}/privacy-policy`,
-  images: [{ url: '/images/og.jpg', width: 1200, height: 630 }],
-},
-twitter: { card: 'summary_large_image' },
+    title,
+    description,
     alternates: {
-      canonical: locale === 'en' ? enUrl : itUrl,
+      canonical: url,
       languages: { it: itUrl, en: enUrl, 'x-default': itUrl },
+    },
+    openGraph: {
+      title,
+      description,
+      url,
+      type: 'website',
+      locale: locale === 'en' ? 'en_US' : 'it_IT',
+      siteName: 'Dimora del Funaro',
+      images: [{ url: `${SITE_URL}/images/og.jpg`, width: 1200, height: 630 }],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title,
+      description,
+      images: [`${SITE_URL}/images/og.jpg`],
     },
   };
 }
