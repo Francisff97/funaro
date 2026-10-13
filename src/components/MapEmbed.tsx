@@ -18,15 +18,30 @@ export default function MapEmbed({
 }) {
   const [loaded, setLoaded] = useState(false);
 
+  const openLink = (
+    <a
+      href={openHref}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="text-sm text-ink underline underline-offset-4 transition-colors hover:text-gold"
+    >
+      {openLabel}
+    </a>
+  );
+
   if (loaded) {
     return (
-      <iframe
-        src={src}
-        title={title}
-        loading="lazy"
-        referrerPolicy="no-referrer-when-downgrade"
-        className="h-64 w-full border border-ink/15"
-      />
+      <div className="flex w-full flex-col gap-3">
+        <iframe
+          src={src}
+          title={title}
+          loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
+          allowFullScreen
+          className="h-64 w-full border border-ink/15"
+        />
+        <div className="text-center">{openLink}</div>
+      </div>
     );
   }
 
@@ -39,14 +54,7 @@ export default function MapEmbed({
             {loadLabel}
           </button>
         </div>
-        <a
-          href={openHref}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-sm text-ink underline underline-offset-4 transition-colors hover:text-gold"
-        >
-          {openLabel}
-        </a>
+        {openLink}
       </div>
     </div>
   );
