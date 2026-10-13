@@ -25,8 +25,8 @@ export default async function About({ params }: Props) {
       <JsonLd data={breadcrumbJsonLd(locale, [{ name: 'Home', path: '' }, { name: t('crumb'), path: '/chi-siamo' }])} />
 
       <section className="relative min-h-[70vh] flex items-end bg-carbone text-cream">
-        <div className="absolute inset-0 bg-[url('/images/room2.jpg')] bg-cover bg-center opacity-80" />
-        <div className="absolute inset-0 bg-gradient-to-t from-carbone to-transparent" />
+        <div className="absolute inset-0 bg-[url('/images/room2.jpg')] bg-cover bg-center brightness-110" />
+<div className="absolute inset-0 bg-gradient-to-t from-carbone/95 via-carbone/50 via-35% to-transparent to-75%" />
         <Container className="relative z-10 pb-16">
           <p className="eyebrow mb-4">{t('heroEyebrow')}</p>
           <h1 className="text-4xl md:text-5xl max-w-2xl">
