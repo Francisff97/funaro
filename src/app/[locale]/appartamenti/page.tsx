@@ -35,7 +35,7 @@ const services = t.raw('services') as string[];
       ]} />
 
       <section className="relative min-h-[70vh] flex items-end bg-carbone text-cream">
-        <div className="absolute inset-0 bg-[url('/images/cucina2.jpg')] bg-cover bg-center opacity-55" />
+        <div className="absolute inset-0 bg-[url('/images/cucina2.jpg')] bg-cover bg-center opacity-70" />
         <div className="absolute inset-0 bg-gradient-to-t from-carbone to-transparent" />
         <Container className="relative z-10 pb-16">
           <p className="eyebrow mb-4">{t('heroEyebrow')}</p>
