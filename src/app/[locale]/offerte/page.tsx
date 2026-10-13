@@ -32,7 +32,7 @@ export default async function Offers({ params }: Props) {
 
       <section className="relative min-h-[60vh] flex items-end bg-carbone text-cream">
        <div className="absolute inset-0 bg-[url('/images/offerte-hero.jpg')] bg-cover bg-center opacity-40" />
-<div className="absolute inset-0 bg-gradient-to-t from-carbone via-carbone/75 via-45% to-carbone/30" />
+<div className="absolute inset-0 bg-gradient-to-t from-carbone/85 via-carbone/65 via-45% to-carbone/30" />
         <Container className="relative z-10 pb-16">
           <p className="eyebrow mb-4">{t('heroEyebrow')}</p>
           <h1 className="text-4xl md:text-5xl max-w-xl">
