@@ -31,8 +31,9 @@ export function PrivacyIt() {
       </P>
       <P>
         La presente informativa è resa anche ai sensi del provvedimento in materia di cookie n. 229 dell’8 maggio 2014
-        del Garante della Privacy, al fine di informare i visitatori del sito circa l’utilizzo dei dati inseriti e dei
-        cookie utilizzati dal sito stesso.
+        e delle Linee guida cookie e altri strumenti di tracciamento del 10 giugno 2021 del Garante della Privacy, al
+        fine di informare i visitatori del sito circa l’utilizzo dei dati inseriti e dei cookie utilizzati dal sito
+        stesso.
       </P>
       <P>
         L’informativa è resa solo per il sito {SITE} e non anche per altri siti web eventualmente consultati
@@ -64,6 +65,8 @@ export function PrivacyIt() {
       <P>
         Il Titolare tratta i dati personali identificativi (ad esempio: nome, cognome, indirizzo, e-mail e telefono) in
         occasione della conclusione del contratto con la struttura ricettiva ovvero di richieste di informazioni.
+        {HAS_GOOGLE_ANALYTICS &&
+          ' Previo consenso dell’utente, sono inoltre trattati dati di navigazione in forma aggregata e pseudonimizzata (ad esempio pagine visitate, durata della visita, tipo di dispositivo e browser, provenienza geografica approssimativa).'}
       </P>
 
       <H2>4) Finalità e base giuridica del trattamento</H2>
@@ -95,8 +98,19 @@ export function PrivacyIt() {
           casella relativa alla presa visione dell’informativa sulla privacy), la struttura la contatterà via e-mail o
           telefono. L’invio facoltativo, esplicito e volontario di posta elettronica agli indirizzi indicati su questo
           sito comporta la successiva acquisizione dell’indirizzo del mittente, necessario per rispondere alle
-          richieste, nonché degli eventuali altri dati personali inseriti nella sua missiva.
+          richieste, nonché degli eventuali altri dati personali inseriti nella sua missiva
+          {HAS_GOOGLE_ANALYTICS ? ';' : '.'}
         </li>
+        {HAS_GOOGLE_ANALYTICS && (
+          <li>
+            per finalità statistiche, ossia per misurare in forma aggregata l’utilizzo del sito (pagine visitate, clic
+            sui contatti, invio del modulo) e migliorarne i contenuti. Questo trattamento avviene esclusivamente previo
+            suo consenso (art. 6, par. 1, lett. a del Regolamento UE 2016/679), espresso tramite il banner cookie, e
+            può essere revocato in qualsiasi momento dal link «Preferenze cookie» presente in fondo a ogni pagina. Il
+            mancato consenso non ha alcuna conseguenza sulla possibilità di navigare il sito o di contattare la
+            struttura.
+          </li>
+        )}
       </OL>
 
       <H2>5) Modalità di trattamento</H2>
@@ -120,8 +134,15 @@ export function PrivacyIt() {
         </li>
         <li>
           per la finalità n. 4: saranno conservati per il tempo strettamente necessario a fornire all’utente le
-          informazioni richieste.
+          informazioni richieste
+          {HAS_GOOGLE_ANALYTICS ? ';' : '.'}
         </li>
+        {HAS_GOOGLE_ANALYTICS && (
+          <li>
+            per la finalità n. 5: i dati statistici sono conservati in Google Analytics per un massimo di 14 mesi, al
+            termine dei quali vengono cancellati automaticamente.
+          </li>
+        )}
       </UL>
       <P>
         I dati saranno in ogni caso eliminati a seguito di richiesta dell’Interessato, salvi ulteriori obblighi di
@@ -132,12 +153,24 @@ export function PrivacyIt() {
       <P>
         I suoi dati potranno essere accessibili a consulenti esterni, istituti di credito e ad autorità di vigilanza e
         di controllo.
+        {HAS_GOOGLE_ANALYTICS &&
+          ' I dati statistici sono trattati da Google Ireland Limited, in qualità di Responsabile del trattamento, per il servizio Google Analytics; il consenso ai cookie è gestito tramite iubenda S.r.l.'}
       </P>
 
       <H2>8) Trasferimento dati</H2>
-      <P>
-        Il Titolare del trattamento non trasferisce i dati personali in paesi terzi o organizzazioni internazionali.
-      </P>
+      {HAS_GOOGLE_ANALYTICS ? (
+        <P>
+          Il Titolare non trasferisce direttamente i dati personali in paesi terzi o organizzazioni internazionali.
+          Limitatamente ai dati statistici raccolti tramite Google Analytics, e solo previo consenso dell’utente, i
+          dati possono essere trattati da Google LLC anche negli Stati Uniti. Tale trasferimento avviene sulla base
+          della decisione di adeguatezza della Commissione Europea relativa all’EU-U.S. Data Privacy Framework, a cui
+          Google LLC aderisce, e delle Clausole Contrattuali Standard.
+        </P>
+      ) : (
+        <P>
+          Il Titolare del trattamento non trasferisce i dati personali in paesi terzi o organizzazioni internazionali.
+        </P>
+      )}
 
       <H2>9) Diritti dell’interessato</H2>
       <P>
@@ -174,7 +207,10 @@ export function PrivacyIt() {
       </UL>
       <P>
         L’interessato ha diritto di opporsi al trattamento nei termini e con le modalità previste dalle disposizioni
-        richiamate.
+        richiamate
+        {HAS_GOOGLE_ANALYTICS
+          ? ' e di revocare in qualsiasi momento il consenso prestato, senza pregiudicare la liceità del trattamento basata sul consenso prima della revoca. Ha inoltre il diritto di proporre reclamo al Garante per la protezione dei dati personali (www.garanteprivacy.it).'
+          : '.'}
       </P>
 
       <H2>10) Modifiche della presente informativa</H2>
@@ -210,18 +246,44 @@ export function PrivacyIt() {
         2014, non è richiesto alcun consenso da parte dell’interessato. Il sito non utilizza cookie di profilazione.
       </P>
 
+      {HAS_GOOGLE_ANALYTICS && (
+        <P>
+          Tra i cookie tecnici rientra quello installato da iubenda, la piattaforma con cui il sito raccoglie e
+          registra le preferenze dell’utente sui cookie: serve unicamente a ricordare la scelta espressa nel banner,
+          così da non riproporlo a ogni visita.
+        </P>
+      )}
+
       {HAS_GOOGLE_MAPS_EMBED && (
         <P>
-          Nella pagina Contatti è disponibile una mappa fornita dal servizio Google Maps (Google Ireland Limited). La mappa viene caricata solo dopo un clic esplicito dell’utente sul pulsante «Mostra la mappa»: prima di allora non viene trasmesso alcun dato a Google. La
-          visualizzazione della mappa può comportare l’installazione di cookie di terze parti da parte di Google, che
-          li gestisce secondo la propria informativa, consultabile all’indirizzo{' '}
-          <A href="https://policies.google.com/privacy">policies.google.com/privacy</A>. In alternativa, l’indirizzo della struttura è indicato in chiaro nella stessa pagina, insieme a un link per aprirlo direttamente in Google Maps.
+          Nella pagina Contatti è disponibile una mappa fornita dal servizio Google Maps (Google Ireland Limited). La
+          mappa viene caricata solo dopo un clic esplicito dell’utente sul pulsante «Mostra la mappa»: prima di allora
+          non viene trasmesso alcun dato a Google. La visualizzazione della mappa può comportare l’installazione di
+          cookie di terze parti da parte di Google, che li gestisce secondo la propria informativa, consultabile
+          all’indirizzo <A href="https://policies.google.com/privacy">policies.google.com/privacy</A>. In alternativa,
+          l’indirizzo della struttura è indicato in chiaro nella stessa pagina, insieme a un link per aprirlo
+          direttamente in Google Maps.
         </P>
       )}
 
       {HAS_GOOGLE_ANALYTICS && (
         <>
-          <P>Il sito utilizza inoltre cookie statistici di terze parti:</P>
+          <H3>Cookie statistici (solo previo consenso)</H3>
+          <P>
+            Previo consenso dell’utente, il sito utilizza Google Analytics 4, un servizio di analisi web fornito da
+            Google Ireland Limited, attivato tramite Google Tag Manager. Google Analytics raccoglie informazioni in
+            forma aggregata e pseudonimizzata sull’utilizzo del sito (ad esempio pagine visitate, durata della visita,
+            clic su telefono, e-mail, WhatsApp e mappa, invio del modulo di contatto), utilizzate dal Titolare
+            esclusivamente per finalità statistiche e per migliorare il sito. Google Analytics 4 non registra né
+            memorizza gli indirizzi IP degli utenti; la funzione Google Signals e la condivisione dei dati per finalità
+            pubblicitarie sono disattivate.
+          </P>
+          <P>
+            Fino a quando l’utente non presta il consenso tramite il banner, i cookie di Google Analytics non vengono
+            installati e nessun dato statistico viene inviato a Google. Il consenso è gestito tramite iubenda e
+            Google Consent Mode, e può essere modificato o revocato in qualsiasi momento dal link «Preferenze cookie»
+            presente in fondo a ogni pagina.
+          </P>
           <div className="mt-6 overflow-x-auto">
             <table className="w-full border-collapse text-left text-sm text-ink-muted">
               <thead>
@@ -234,25 +296,31 @@ export function PrivacyIt() {
               </thead>
               <tbody>
                 <tr className="border-b border-ink/10">
+                  <td className="py-2 pr-4">_iub_cs-*</td>
+                  <td className="py-2 pr-4">Tecnico</td>
+                  <td className="py-2 pr-4">fino a 12 mesi</td>
+                  <td className="py-2">iubenda: memorizza le preferenze sui cookie espresse dall’utente</td>
+                </tr>
+                <tr className="border-b border-ink/10">
                   <td className="py-2 pr-4">_ga</td>
                   <td className="py-2 pr-4">Statistico (terze parti)</td>
                   <td className="py-2 pr-4">2 anni</td>
-                  <td className="py-2">Google Analytics</td>
+                  <td className="py-2">Google Analytics: distingue gli utenti in forma pseudonimizzata</td>
                 </tr>
                 <tr className="border-b border-ink/10">
-                  <td className="py-2 pr-4">_gat</td>
+                  <td className="py-2 pr-4">_ga_*</td>
                   <td className="py-2 pr-4">Statistico (terze parti)</td>
-                  <td className="py-2 pr-4">1 minuto</td>
-                  <td className="py-2">Google Analytics</td>
+                  <td className="py-2 pr-4">2 anni</td>
+                  <td className="py-2">Google Analytics: mantiene lo stato della sessione</td>
                 </tr>
               </tbody>
             </table>
           </div>
           <P>
-            Questo sito web utilizza Google Analytics, un servizio di analisi web fornito da Google. Le informazioni
-            generate dal cookie sull’utilizzo del sito web (compreso l’indirizzo IP anonimizzato) verranno trasmesse e
-            depositate presso i server di Google, che le utilizzerà per esaminare l’utilizzo del sito e compilare report
-            sulle attività del sito per i suoi operatori.
+            Informativa di Google:{' '}
+            <A href="https://policies.google.com/privacy">policies.google.com/privacy</A>. Componente aggiuntivo del
+            browser per la disattivazione di Google Analytics:{' '}
+            <A href="https://tools.google.com/dlpage/gaoptout">tools.google.com/dlpage/gaoptout</A>.
           </P>
         </>
       )}
@@ -264,10 +332,16 @@ export function PrivacyIt() {
       </P>
 
       <H3>Disabilitazione dei cookie</H3>
+      {HAS_GOOGLE_ANALYTICS && (
+        <P>
+          L’utente può modificare o revocare in qualsiasi momento il consenso ai cookie statistici dal link
+          «Preferenze cookie» presente in fondo a ogni pagina del sito.
+        </P>
+      )}
       <P>
-        L’utente può gestire le preferenze relative ai cookie direttamente all’interno del proprio browser e impedire,
-        ad esempio, che terze parti possano installarne. Tramite le preferenze del browser è inoltre possibile
-        eliminare i cookie installati in passato. È importante notare che, disabilitando tutti i cookie, il
+        L’utente può inoltre gestire le preferenze relative ai cookie direttamente all’interno del proprio browser e
+        impedire, ad esempio, che terze parti possano installarne. Tramite le preferenze del browser è inoltre
+        possibile eliminare i cookie installati in passato. È importante notare che, disabilitando tutti i cookie, il
         funzionamento di questo sito potrebbe essere compromesso. Ciascun browser presenta procedure diverse per la
         gestione delle impostazioni; l’utente può ottenere istruzioni specifiche attraverso i link sottostanti:
       </P>
@@ -287,7 +361,7 @@ export function PrivacyIt() {
       </P>
 
       <P>
-        <em>Ultimo aggiornamento: 11 ottobre 2026.</em>
+        <em>Ultimo aggiornamento: 13 ottobre 2026.</em>
       </P>
     </>
   );
