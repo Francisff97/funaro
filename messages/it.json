@@ -136,7 +136,13 @@
       "submit": "Invia richiesta", "thanks": "Grazie! Ti risponderemo entro 24 ore.",
       "sending": "Invio in corso…",
 "error": "Qualcosa è andato storto. Riprova o scrivici direttamente a info@dimoradelfunaro.it."
-    }
+    },
+    "map": {
+  "title": "Mappa di Via Ripa Serancia 31, Orvieto",
+  "note": "La mappa è fornita da Google: caricandola, Google potrebbe impostare dei cookie.",
+  "load": "Mostra la mappa",
+  "open": "Apri in Google Maps"
+}
   },
   "seo": {
     "home": { "title": "Dimora del Funaro · Appartamento nel centro di Orvieto", "description": "Appartamento privato ad uso esclusivo nel cuore medievale di Orvieto. Fino a 4 ospiti, terrazzo, parcheggio. Miglior prezzo garantito prenotando direttamente." },
