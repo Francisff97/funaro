@@ -39,6 +39,7 @@ export default async function Offers({ params }: Props) {
           </h1>
         </Container>
       </section>
+      <h2 className="sr-only">{t('cardsTitle')}</h2>
 
       <Section>
         <Container className="py-20">
