@@ -33,7 +33,7 @@ export default async function Footer() {
       </div>
       <div className="border-t border-white/10 pb-[60px]">
         <div className="mx-auto max-w-6xl px-6 md:px-10 py-5 flex flex-col md:flex-row justify-between gap-2 text-[16px] text-cream-muted">
-          <span>{SITE.name} · Orvieto · {t('ownedBy')} · CIN: IT055023C101017655</span>
+          <span>{SITE.name} · Orvieto · {t('ownedBy')} · CIN: IT055023C101017655 · P.IVA 01614530556</span>
           <Link href="/privacy-policy">{t('privacy')}</Link>
           <a href="#" className="iubenda-cs-preferences-link nav-link …stesse classi degli altri link del footer…">
   {t('cookiePrefs')}
