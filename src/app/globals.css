@@ -81,3 +81,10 @@ body{
   padding: 0.75rem;
 }
 }
+@media (width < 64rem) {
+  main [class*='aspect-']:not(.aspect-video) {
+    max-height: 400px;
+    width: 100% !important;
+    max-width:100% !important;
+  }
+}
