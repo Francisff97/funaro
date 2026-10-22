@@ -27,7 +27,7 @@ export function lodgingJsonLd(locale: string) {
       longitude: SITE.address.lng,
     },
     amenityFeature: [
-      'Wi-Fi', 'Cucina attrezzata', 'Terrazzo privato', 'Parcheggio riservato',
+      'Wi-Fi', 'Cucina attrezzata', 'Balcone privato', 'Parcheggio riservato',
       'Aria condizionata', 'Self check-in', 'TV 50"', 'Animali ammessi',
     ].map((n) => ({ '@type': 'LocationFeatureSpecification', name: n, value: true })),
     checkinTime: '14:00',

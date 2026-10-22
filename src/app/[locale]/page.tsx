@@ -8,6 +8,8 @@ import { Section, Container } from '@/components/Section';
 import JsonLd from '@/components/JsonLd';
 import Reveal from '@/components/Reveal';
 import Slider from '@/components/Slider';
+import HeroVideo from '@/components/HeroVideo';
+import { IMG, HOME_CAMERE_SRC } from '@/lib/images';
 import BookingWidget from '@/components/BookingWidget';
 
 type Props = { params: Promise<{ locale: Locale }> };
@@ -26,10 +28,8 @@ export default async function Home({ params }: Props) {
   const directions = t.raw('directionsList') as string[];
   const offers = to.raw('list') as { min: string; badge: string; title: string; text: string }[];
 
-  const roomImages = [1, 2, 3].map((n) => ({
-    src: `/images/bedroom-${n}.jpg`,
-    alt: `${SITE.name} — camera da letto ${n}, Orvieto`,
-  }));
+  const roomAlts = t.raw('gallery') as string[];
+  const roomImages = HOME_CAMERE_SRC.map((src, i) => ({ src, alt: roomAlts[i] ?? SITE.name }));
 
   return (
     <>
@@ -37,8 +37,10 @@ export default async function Home({ params }: Props) {
 
       {/* HERO */}
       <section className="relative min-h-[85vh] flex items-end bg-carbone text-cream">
-<div className="absolute inset-0 bg-[url('/images/hero.jpg')] bg-cover bg-center opacity-90" />
-<div className="absolute inset-0 bg-gradient-to-t from-carbone/95 via-carbone/45 via-40% to-transparent to-75%" />
+<div className="absolute inset-0 overflow-hidden">
+  <HeroVideo poster="/images/foto/hero-drone.jpg" />
+</div>
+<div className="absolute inset-0 bg-gradient-to-t from-carbone/95 via-carbone/50 via-40% to-carbone/10" />
         <Container className="relative z-10 pb-20">
           <p className="eyebrow mb-4">{t('heroEyebrow')}</p>
           <h1 className="text-4xl md:text-6xl max-w-3xl">
@@ -66,7 +68,7 @@ export default async function Home({ params }: Props) {
           </Reveal>
           <Reveal delay={0.1}>
             <div className="relative aspect-[4/3]">
-              <Image src="/images/cucina.jpg" alt={`${SITE.name} — cucina attrezzata`} fill sizes="(max-width:768px) 100vw, 50vw" className="object-cover" />
+              <Image src={IMG.cucina} alt={t('introImgAlt')} fill sizes="(max-width:768px) 100vw, 50vw" className="object-cover" />
             </div>
           </Reveal>
         </Container>
@@ -119,7 +121,7 @@ export default async function Home({ params }: Props) {
           </Reveal>
           <Reveal delay={0.1}>
             <div className="relative aspect-[4/3]">
-              <Image src="/images/countryside.jpg" alt={`Dintorni di ${SITE.name} — campagna umbra`} fill sizes="(max-width:768px) 100vw, 50vw" className="object-cover" />
+              <Image src="/images/foto/drone-cupola-valle.jpg" alt={`Dintorni di ${SITE.name} — campagna umbra`} fill sizes="(max-width:768px) 100vw, 50vw" className="object-cover" />
             </div>
           </Reveal>
         </Container>

@@ -1,156 +1,324 @@
 {
-  "nav": { "apartment": "Apartment", "about": "About", "offers": "Offers", "contact": "Contact", "book": "Book now" },
+  "nav": {
+    "apartment": "Apartment",
+    "about": "About",
+    "offers": "Offers",
+    "contact": "Contact",
+    "book": "Book now"
+  },
   "notFound": {
-  "eyebrow": "Error 404",
-  "title": "Page not found",
-  "text": "The page you're looking for doesn't exist or has been moved. Head back home or have a look at the apartment.",
-  "home": "Back to home",
-  "apartment": "See the apartment"
-},
-  "footer": { "explore": "Explore", "cookiePrefs": "Cookie Preferences", "privacy": "Privacy & Cookie Policy", "alsoCatia": "Also by Catia", "ownedBy": "A property by Catia" },
+    "eyebrow": "Error 404",
+    "title": "Page not found",
+    "text": "The page you're looking for doesn't exist or has been moved. Head back home or have a look at the apartment.",
+    "home": "Back to home",
+    "apartment": "See the apartment"
+  },
+  "footer": {
+    "explore": "Explore",
+    "cookiePrefs": "Cookie Preferences",
+    "privacy": "Privacy & Cookie Policy",
+    "alsoCatia": "Also by Catia",
+    "ownedBy": "A property by Catia"
+  },
   "home": {
     "heroEyebrow": "Dimora del Funaro · Orvieto",
-    "heroTitle": "Your private apartment in the", "heroTitleAccent": "medieval heart", "heroTitleEnd": "of Orvieto",
-    "heroText": "Not a hotel room. An entire apartment just for you — with a fully equipped kitchen, a private terrace and the freedom of truly feeling at home.",
+    "heroTitle": "Your private apartment in the",
+    "heroTitleAccent": "medieval heart",
+    "heroTitleEnd": "of Orvieto",
+    "heroText": "Not a hotel room. An entire apartment just for you — with a fully equipped kitchen, a private balcony and the freedom of truly feeling at home.",
     "heroCta": "Discover the rooms",
     "heroAlt": "View over Orvieto and the Umbrian countryside from the apartment window",
     "introEyebrow": "The apartment",
-    "introTitle": "All the space of a home. All the charm of", "introTitleAccent": "history",
-    "introText": "Dimora del Funaro is a private apartment in the San Giovanni district, steps from Orvieto's Cathedral, the Torre del Moro and St. Patrick's Well.\nTwo bedrooms, an equipped kitchen, reserved parking and a private terrace overlooking Piazza San Giovanni.",
+    "introTitle": "All the space of a home. All the charm of",
+    "introTitleAccent": "history",
+    "introText": "Dimora del Funaro is a private apartment in the San Giovanni district, steps from Orvieto's Cathedral, the Torre del Moro and St. Patrick's Well.\nTwo bedrooms, an equipped kitchen, reserved parking and a private balcony overlooking Piazza San Giovanni.",
     "introCta": "Discover the apartment",
-    "introImgAlt": "Equipped kitchen of the Dimora del Funaro apartment",
-    "amenities": ["Free Wi-Fi", "Equipped kitchen", "Private terrace", "Reserved parking", "Pets allowed", "Self check-in", "50\" TV", "Air conditioning"],
-    "gallery": ["Double bedroom", "Bedroom with bunk beds", "Private terrace over Piazza San Giovanni", "Full bathroom"],
+    "introImgAlt": "Wooden equipped kitchen of the Dimora del Funaro apartment",
+    "amenities": [
+      "Free Wi-Fi",
+      "Equipped kitchen",
+      "Private balcony",
+      "Reserved parking",
+      "Pets allowed",
+      "Self check-in",
+      "50\" TV",
+      "Air conditioning"
+    ],
+    "gallery": [
+      "Double bedroom with recessed headboard",
+      "Double bed with embroidered cushions",
+      "Bedroom with bunk beds",
+      "Double bedroom",
+      "Bedroom with single beds"
+    ],
     "roomEyebrow": "Dimora del Funaro",
-    "roomTitle": "Up to 4 guests. A terrace over", "roomTitleAccent": "Piazza San Giovanni.",
-    "roomText": "The apartment is entirely for the guests' exclusive use. Two bedrooms, a full bathroom and a fully equipped kitchen — including a coffee machine with different pod types.\nThe private terrace is the ideal spot for a slow breakfast or an afternoon read.",
+    "roomTitle": "Up to 4 guests. A balcony over",
+    "roomTitleAccent": "Piazza San Giovanni.",
+    "roomText": "The apartment is entirely for the guests' exclusive use. Two bedrooms, a full bathroom and a fully equipped kitchen — including a coffee machine with different pod types.\nThe private balcony is the ideal spot for a slow breakfast or an afternoon read.",
     "price": "From €150 / night · up to 4 guests",
     "checkAvailability": "Check availability",
     "directionsEyebrow": "One place, a thousand directions",
     "directionsTitle": "From the old town to the Umbrian countryside.",
     "directionsText": "From Dimora del Funaro you can wander on foot through Orvieto's medieval streets, or set off to explore the surroundings.",
-    "directionsList": ["Orvieto Cathedral", "Torre del Moro", "St. Patrick's Well", "Civita di Bagnoregio", "Lake Bolsena", "Orvieto Classico wineries"],
+    "directionsList": [
+      "Orvieto Cathedral",
+      "Torre del Moro",
+      "St. Patrick's Well",
+      "Civita di Bagnoregio",
+      "Lake Bolsena",
+      "Orvieto Classico wineries"
+    ],
     "directionsImgAlt": "Décor detail of the apartment with a plant",
     "directionsCta": "Discover the apartment",
     "catiaEyebrow": "Real hospitality",
-    "catiaTitle": "Catia and her way of", "catiaTitleAccent": "welcoming you.",
+    "catiaTitle": "Catia and her way of",
+    "catiaTitleAccent": "welcoming you.",
     "catiaText": "Behind Dimora del Funaro there is Catia — the same person who runs the nearby B&B Torre Polidori with care and passion. With her, hospitality isn't a service: it's a way of life.",
     "catiaImgAlt": "Catia — hospitality at Dimora del Funaro",
     "catiaCta": "About us",
     "offersEyebrow": "Our offers",
-    "offersTitle": "Live more,", "offersTitle2": "spend less",
+    "offersTitle": "Live more,",
+    "offersTitle2": "spend less",
     "offersList": [
-      { "min": "Minimum 5 nights", "badge": "10% off", "title": "Orvieto, unhurried", "text": "Five days to really get to know Orvieto — and maybe a trip to Civita di Bagnoregio or an evening at a winery." },
-      { "min": "Minimum 3 nights", "badge": "5% off", "title": "Long weekend", "text": "Three nights for the Cathedral, St. Patrick's Well and a walk along Lake Corbara." }
+      {
+        "min": "Minimum 5 nights",
+        "badge": "10% off",
+        "title": "Orvieto, unhurried",
+        "text": "Five days to really get to know Orvieto — and maybe a trip to Civita di Bagnoregio or an evening at a winery."
+      },
+      {
+        "min": "Minimum 3 nights",
+        "badge": "5% off",
+        "title": "Long weekend",
+        "text": "Three nights for the Cathedral, St. Patrick's Well and a walk along Lake Corbara."
+      }
     ],
     "offersCta": "Get the offer",
-    "finalTitle": "The best price online is only", "finalTitleAccent": "here",
+    "finalTitle": "The best price online is only",
+    "finalTitleAccent": "here",
     "finalText": "Book directly and save on the platforms' commissions.",
     "finalCta": "Check availability"
   },
   "apartment": {
     "crumb": "Apartment",
     "heroEyebrow": "The apartment",
-    "heroTitle": "The freedom of a whole apartment, with the services of a", "heroTitleAccent": "hotel",
+    "heroTitle": "The freedom of a whole apartment, with the services of a",
+    "heroTitleAccent": "hotel",
     "detailEyebrow": "Dimora del Funaro · up to 4 guests",
     "detailTitle": "An apartment all for you.",
-    "detailText": "The apartment is entirely for the guests' exclusive use. Two bedrooms, a full bathroom and a fully equipped kitchen — including a coffee machine with different pod types.\nThe private terrace overlooking Piazza San Giovanni is the extra detail: the ideal spot for a slow breakfast or an afternoon read.",
+    "detailText": "The apartment is entirely for the guests' exclusive use. Two bedrooms, a full bathroom and a fully equipped kitchen — including a coffee machine with different pod types.\nThe private balcony overlooking Piazza San Giovanni is the extra detail: the ideal spot for a slow breakfast or an afternoon read.",
     "price": "From €150 / night · up to 4 guests",
     "checkAvailability": "Check availability",
     "faqEyebrow": "FAQ",
     "faqTitle": "Everything you want to know",
-    "gallery": ["Double bedroom", "Bedroom with bunk beds", "Private terrace over Piazza San Giovanni", "Full bathroom"],
+    "gallery": [
+      "Equipped kitchen with French door to the balcony",
+      "Double bedroom with recessed headboard",
+      "Bedroom with bunk beds",
+      "Double bed with embroidered cushions",
+      "Wooden kitchen with dining table",
+      "View of the church on Piazza San Giovanni from the French door",
+      "Bathroom with shower",
+      "Breakfast on the balcony overlooking the church",
+      "White orchid in a glass vase",
+      "Shelf with plants in the bedroom",
+      "Towels and diffuser in the bathroom",
+      "Double bedroom",
+      "Bedroom with single beds",
+      "Bedroom with bunk beds",
+      "Full bathroom",
+      "Private balcony over Piazza San Giovanni"
+    ],
     "servicesLabel": "Included services",
-    "services": ["Free Wi-Fi", "Equipped kitchen", "50\" TV", "Air conditioning", "Washing machine", "Reserved parking", "Pets allowed", "Self check-in", "CO detector", "Fire extinguisher", "Safe"],
-    "terraceEyebrow": "The terrace",
-    "terraceTitle": "A slow breakfast over", "terraceTitleAccent": "Piazza San Giovanni",
-    "terraceText": "The private terrace overlooking Piazza San Giovanni is the heart of the apartment. Morning or evening, with a coffee or a glass of local wine, it's where Orvieto reveals itself in its best light.",
-    "terraceImgAlt": "Breakfast corner with coffee machine and pods",
+    "services": [
+      "Free Wi-Fi",
+      "Equipped kitchen",
+      "50\" TV",
+      "Air conditioning",
+      "Washing machine",
+      "Reserved parking",
+      "Pets allowed",
+      "Self check-in",
+      "CO detector",
+      "Fire extinguisher",
+      "Safe"
+    ],
     "ctaEyebrow": "Best price guaranteed",
-    "ctaTitle": "The best price online is only", "ctaTitleAccent": "here.",
+    "ctaTitle": "The best price online is only",
+    "ctaTitleAccent": "here.",
     "ctaText": "Book directly and save on the platforms' commissions.",
-    "ctaImgAlt": "Décor detail with a reed diffuser",
+    "ctaImgAlt": "Embroidered cushion on the double bed",
     "faqs": [
-      { "q": "Is parking available?", "a": "Yes, a reserved parking space for apartment guests, included in the stay." },
-      { "q": "What time is check-in?", "a": "Self check-in via WhatsApp, no time constraints. On request Catia is available to welcome you in person." },
-      { "q": "What time is check-out?", "a": "Check-out must be completed by 10:00 AM." },
-      { "q": "Are pets allowed?", "a": "Yes, small or medium sized. For specific cases, message us before booking." },
-      { "q": "Do I need to bring anything?", "a": "No — you'll find everything you need, including a coffee machine with assorted pods." }
+      {
+        "q": "Is parking available?",
+        "a": "Yes, a reserved parking space for apartment guests, included in the stay."
+      },
+      {
+        "q": "What time is check-in?",
+        "a": "Self check-in via WhatsApp, no time constraints. On request Catia is available to welcome you in person."
+      },
+      {
+        "q": "What time is check-out?",
+        "a": "Check-out must be completed by 10:00 AM."
+      },
+      {
+        "q": "Are pets allowed?",
+        "a": "Yes, small or medium sized. For specific cases, message us before booking."
+      },
+      {
+        "q": "Do I need to bring anything?",
+        "a": "No — you'll find everything you need, including a coffee machine with assorted pods."
+      }
+    ],
+    "terraceEyebrow": "The balcony",
+    "terraceTitle": "A slow breakfast over",
+    "terraceTitleAccent": "Piazza San Giovanni",
+    "terraceText": "The private balcony overlooking Piazza San Giovanni is the heart of the apartment. Morning or evening, with a coffee or a glass of local wine, it's where Orvieto reveals itself in its best light.",
+    "terraceImgAlt": "Breakfast corner with coffee machine and pods",
+    "balconyGallery": [
+      "Breakfast on the balcony overlooking the church of San Giovanni",
+      "Private balcony over Piazza San Giovanni",
+      "View of Orvieto from the balcony"
     ]
   },
   "about": {
     "crumb": "About",
     "heroEyebrow": "About",
-    "heroTitle": "A home in the medieval centre of Orvieto.", "heroTitleAccent": "Someone who cares",
+    "heroTitle": "A home in the medieval centre of Orvieto.",
+    "heroTitleAccent": "Someone who cares",
     "heroText": "Dimora del Funaro was born from Catia's idea — the same person who has run the nearby B&B Torre Polidori for years, with the same passion for authentic hospitality.",
     "storyEyebrow": "Catia and Dimora del Funaro",
-    "storyTitle": "A new project built with the same", "storyTitleAccent": "care",
+    "storyTitle": "A new project built with the same",
+    "storyTitleAccent": "care",
     "storyText": "The apartment is a new project, recently opened, but built with the same care: every detail is designed so you can feel Orvieto as your own city.\nCatia is there — for a tip on where to eat, on the lesser-known trails, or simply to make sure everything is in place before you arrive.",
     "locationEyebrow": "Orvieto steps away",
     "locationTitle": "In the San Giovanni district. Walking distance from everything.",
     "locationText1": "The apartment is in the San Giovanni district — quiet, authentic, walking distance from everything.",
-    "nearby": ["Orvieto Cathedral", "Piazza del Popolo", "St. Patrick's Well", "Pozzo della Cava", "Palazzo del Capitano del Popolo"],
+    "nearby": [
+      "Orvieto Cathedral",
+      "Piazza del Popolo",
+      "St. Patrick's Well",
+      "Pozzo della Cava",
+      "Palazzo del Capitano del Popolo"
+    ],
     "locationText2": "The surrounding countryside is part of the experience. Nearby you'll find Civita di Bagnoregio, Lake Bolsena and the Maremma wineries.",
-    "around": ["Civita di Bagnoregio", "Lake Bolsena", "Lake Corbara", "Maremma Viterbese wineries"],
-    "cta": "Check availability"
+    "around": [
+      "Civita di Bagnoregio",
+      "Lake Bolsena",
+      "Lake Corbara",
+      "Maremma Viterbese wineries"
+    ],
+    "cta": "Check availability",
+    "detailAlts": [
+      "Cactus in a pot on a shelf in the apartment",
+      "Décor detail of the apartment"
+    ]
   },
   "offers": {
     "crumb": "Offers",
     "cardsTitle": "Our Offers",
     "heroEyebrow": "Our offers",
-    "heroTitle": "The longer you stay, the more you save —", "heroTitleAccent": "and discover.",
+    "heroTitle": "The longer you stay, the more you save —",
+    "heroTitleAccent": "and discover.",
     "getOffer": "Get the offer",
     "whyEyebrow": "Why book directly",
-    "whyTitle": "The best price online is only", "whyTitleAccent": "here",
+    "whyTitle": "The best price online is only",
+    "whyTitleAccent": "here",
     "whyText": "By booking with us you avoid the commissions of platforms like Booking.com or Airbnb. We keep that difference for you, not for a middleman. Same apartment, same service, lower price.",
     "whyCta": "Contact us directly",
     "whyImgAlt": "Brochures and tourist map of Orvieto",
     "list": [
-      { "min": "Minimum 5 nights", "badge": "10% off", "title": "Orvieto, unhurried", "text": "Five days are the right time to really get to know Orvieto — and maybe a trip to Civita di Bagnoregio or an evening at a winery." },
-      { "min": "Minimum 3 nights", "badge": "5% off", "title": "Long weekend", "text": "Three nights for the Cathedral, St. Patrick's Well, a slow lunch in the old town and a walk along Lake Corbara." }
+      {
+        "min": "Minimum 5 nights",
+        "badge": "10% off",
+        "title": "Orvieto, unhurried",
+        "text": "Five days are the right time to really get to know Orvieto — and maybe a trip to Civita di Bagnoregio or an evening at a winery."
+      },
+      {
+        "min": "Minimum 3 nights",
+        "badge": "5% off",
+        "title": "Long weekend",
+        "text": "Three nights for the Cathedral, St. Patrick's Well, a slow lunch in the old town and a walk along Lake Corbara."
+      }
     ],
     "howEyebrow": "How it works",
     "howTitle": "Three steps to the best price",
     "steps": [
-      { "n": "01", "title": "Choose your dates", "text": "Pick your stay. At least 3 or 5 nights to unlock the offers." },
-      { "n": "02", "title": "Book here", "text": "Fill in the form or message us on WhatsApp: we’ll send you a quote with the discount already applied." },
-      { "n": "03", "title": "Confirm and come", "text": "Get confirmation within 24 hours. Pay on site or via online payment link." }
+      {
+        "n": "01",
+        "title": "Choose your dates",
+        "text": "Pick your stay. At least 3 or 5 nights to unlock the offers."
+      },
+      {
+        "n": "02",
+        "title": "Book here",
+        "text": "Fill in the form or message us on WhatsApp: we’ll send you a quote with the discount already applied."
+      },
+      {
+        "n": "03",
+        "title": "Confirm and come",
+        "text": "Get confirmation within 24 hours. Pay on site or via online payment link."
+      }
     ]
   },
   "contact": {
     "crumb": "Contact",
     "heroEyebrow": "Contact us",
-    "heroTitle": "The best price online is only found by", "heroTitleAccent": "booking directly.",
+    "heroTitle": "The best price online is only found by",
+    "heroTitleAccent": "booking directly.",
     "heroText": "Fill in the form to receive the best available offer, or contact us directly — we reply within 24 hours.",
-    "phoneLabel": "Phone & WhatsApp", "addressLabel": "Address",
-    "formEyebrow": "Contact form", "formTitle": "Write to us",
+    "phoneLabel": "Phone & WhatsApp",
+    "addressLabel": "Address",
+    "formEyebrow": "Contact form",
+    "formTitle": "Write to us",
     "reachEyebrow": "How to reach us",
     "reachText": "By car — A1, Orvieto exit. Reserved parking included.\nBy train — Orvieto station, then funicular + shuttle bus to the old town.",
     "checkinEyebrow": "Check-in & check-out",
     "checkinText": "Check-in — self check-in via WhatsApp, no time constraints.\nCheck-out — by 10:00 AM.",
     "form": {
-      "firstName": "First name", "firstNamePh": "Your first name",
-      "lastName": "Last name", "lastNamePh": "Your last name",
-      "phone": "Phone", "checkin": "Arrival date", "checkout": "Departure date",
-      "message": "Message", "messagePh": "Tell us more about your stay…",
+      "firstName": "First name",
+      "firstNamePh": "Your first name",
+      "lastName": "Last name",
+      "lastNamePh": "Your last name",
+      "phone": "Phone",
+      "checkin": "Arrival date",
+      "checkout": "Departure date",
+      "message": "Message",
+      "messagePh": "Tell us more about your stay…",
       "privacy": "I have read and accept the <link>privacy policy</link> under Regulation (EU) 2016/679 (GDPR).",
-      "submit": "Send request", "thanks": "Thank you! We'll reply within 24 hours.",
+      "submit": "Send request",
+      "thanks": "Thank you! We'll reply within 24 hours.",
       "sending": "Sending…",
-"error": "Something went wrong. Please try again or email us at info@dimoradelfunaro.it."
+      "error": "Something went wrong. Please try again or email us at info@dimoradelfunaro.it."
     },
     "map": {
-  "title": "Map of Via Ripa Serancia 31, Orvieto",
-  "note": "The map is provided by Google: loading it may let Google set cookies.",
-  "load": "Show the map",
-  "open": "Open in Google Maps"
-}
+      "title": "Map of Via Ripa Serancia 31, Orvieto",
+      "note": "The map is provided by Google: loading it may let Google set cookies.",
+      "load": "Show the map",
+      "open": "Open in Google Maps"
+    }
   },
   "seo": {
-    "home": { "title": "Dimora del Funaro · Apartment in central Orvieto", "description": "Private apartment for exclusive use in the medieval heart of Orvieto. Up to 4 guests, terrace, parking. Best price guaranteed when booking directly." },
-    "apartment": { "title": "The apartment · Dimora del Funaro Orvieto", "description": "Two bedrooms, equipped kitchen, private terrace over Piazza San Giovanni. The freedom of an apartment with hotel services. From €150/night." },
-    "about": { "title": "About · Dimora del Funaro Orvieto", "description": "A home in the medieval centre of Orvieto, run by Catia with the same care as the B&B Torre Polidori. Authentic hospitality in the San Giovanni district." },
-    "offers": { "title": "Offers · Dimora del Funaro Orvieto", "description": "The longer you stay, the more you save: up to 10% off longer stays. Lowest price online by booking directly, no commissions." },
-    "contact": { "title": "Contact & booking · Dimora del Funaro Orvieto", "description": "Book Dimora del Funaro in Orvieto directly. Phone, WhatsApp and contact form. Reply within 24 hours." }
+    "home": {
+      "title": "Dimora del Funaro · Apartment in central Orvieto",
+      "description": "Private apartment for exclusive use in the medieval heart of Orvieto. Up to 4 guests, balcony, parking. Best price guaranteed when booking directly."
+    },
+    "apartment": {
+      "title": "The apartment · Dimora del Funaro Orvieto",
+      "description": "Two bedrooms, equipped kitchen, private balcony over Piazza San Giovanni. The freedom of an apartment with hotel services. From €150/night."
+    },
+    "about": {
+      "title": "About · Dimora del Funaro Orvieto",
+      "description": "A home in the medieval centre of Orvieto, run by Catia with the same care as the B&B Torre Polidori. Authentic hospitality in the San Giovanni district."
+    },
+    "offers": {
+      "title": "Offers · Dimora del Funaro Orvieto",
+      "description": "The longer you stay, the more you save: up to 10% off longer stays. Lowest price online by booking directly, no commissions."
+    },
+    "contact": {
+      "title": "Contact & booking · Dimora del Funaro Orvieto",
+      "description": "Book Dimora del Funaro in Orvieto directly. Phone, WhatsApp and contact form. Reply within 24 hours."
+    }
   },
   "mobileBar": {
     "call": "Call",
@@ -158,11 +326,11 @@
     "map": "Map"
   },
   "privacy": {
-  "meta": {
-    "title": "Privacy & Cookie Policy · Dimora del Funaro",
-    "description": "How Dimora del Funaro in Orvieto processes personal data and uses cookies on this website."
-  },
-  "eyebrow": "Legal",
-  "title": "Privacy & Cookie Policy"
-}
+    "meta": {
+      "title": "Privacy & Cookie Policy · Dimora del Funaro",
+      "description": "How Dimora del Funaro in Orvieto processes personal data and uses cookies on this website."
+    },
+    "eyebrow": "Legal",
+    "title": "Privacy & Cookie Policy"
+  }
 }

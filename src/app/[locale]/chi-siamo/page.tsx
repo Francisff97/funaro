@@ -4,6 +4,8 @@ import { buildMetadata } from '@/lib/seo';
 import { breadcrumbJsonLd } from '@/lib/jsonld';
 import { type Locale } from '@/lib/site';
 import { Section, Container } from '@/components/Section';
+import Gallery from '@/components/Gallery';
+import { DETTAGLIO_SRC } from '@/lib/images';
 import JsonLd from '@/components/JsonLd';
 
 type Props = { params: Promise<{ locale: Locale }> };
@@ -19,13 +21,15 @@ export default async function About({ params }: Props) {
   const t = await getTranslations('about');
   const nearby = t.raw('nearby') as string[];
   const around = t.raw('around') as string[];
+  const detailAlts = t.raw('detailAlts') as string[];
+  const dettagli = DETTAGLIO_SRC.map((src, i) => ({ src, alt: detailAlts[i] ?? '' }));
 
   return (
     <>
       <JsonLd data={breadcrumbJsonLd(locale, [{ name: 'Home', path: '' }, { name: t('crumb'), path: '/chi-siamo' }])} />
 
       <section className="relative min-h-[70vh] flex items-end bg-carbone text-cream">
-        <div className="absolute inset-0 bg-[url('/images/room2.jpg')] bg-cover bg-center brightness-110" />
+        <div className="absolute inset-0 bg-[url('/images/foto/drone-tetti-duomo.jpg')] bg-cover bg-center" />
 <div className="absolute inset-0 bg-gradient-to-t from-carbone/95 via-carbone/50 via-35% to-transparent to-75%" />
         <Container className="relative z-10 pb-16">
           <p className="eyebrow mb-4">{t('heroEyebrow')}</p>
@@ -43,7 +47,7 @@ export default async function About({ params }: Props) {
             <h2 className="text-3xl mb-6">{t('storyTitle')} <span className="italic text-gold">{t('storyTitleAccent')}</span>.</h2>
             <p className="text-ink-muted whitespace-pre-line">{t('storyText')}</p>
           </div>
-          <div className="aspect-[4/3] bg-[url('/images/detail.jpg')] bg-cover bg-center" />
+          <Gallery slides={dettagli} className="aspect-[4/3] w-full" />
         </Container>
       </Section>
 
