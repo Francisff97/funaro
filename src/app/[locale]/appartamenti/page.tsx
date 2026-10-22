@@ -6,7 +6,7 @@ import { SITE, type Locale } from '@/lib/site';
 import { Section, Container } from '@/components/Section';
 import JsonLd from '@/components/JsonLd';
 import Image from 'next/image';
-import { IMG, CAMERE_SRC } from '@/lib/images';
+import { IMG, CAMERE_SRC, BALCONE_SRC } from '@/lib/images';
 import Reveal from '@/components/motion/Reveal';
 import Gallery from '@/components/Gallery';
 
@@ -26,6 +26,8 @@ export default async function Apartment({ params }: Props) {
   const galleryAlts = t.raw('gallery') as string[];
 const camere = CAMERE_SRC.map((src, idx) => ({ src, alt: galleryAlts[idx] ?? '' }));
 const services = t.raw('services') as string[];
+  const balconyAlts = t.raw('balconyGallery') as string[];
+  const balcone = BALCONE_SRC.map((src, idx) => ({ src, alt: balconyAlts[idx] ?? '' }));
 
   return (
     <>
@@ -35,7 +37,7 @@ const services = t.raw('services') as string[];
       ]} />
 
       <section className="relative min-h-[70vh] flex items-end bg-carbone text-cream">
-        <div className="absolute inset-0 bg-[url('/images/cucina2.jpg')] bg-cover bg-center brightness-110" />
+        <div className="absolute inset-0 bg-[url('/images/foto/cucina-ambiente.jpg')] bg-cover bg-center" />
 <div className="absolute inset-0 bg-gradient-to-t from-carbone/95 via-carbone/50 via-35% to-transparent to-75%" />
         <Container className="relative z-10 pb-16">
           <p className="eyebrow mb-4">{t('heroEyebrow')}</p>
@@ -65,7 +67,7 @@ const services = t.raw('services') as string[];
   </Container>
 </Section>
 
-{/* TERRAZZO */}
+{/* BALCONE */}
 <Section>
   <Container className="grid md:grid-cols-2 gap-12 py-20 md:py-28 items-center">
     <Reveal>
@@ -76,9 +78,7 @@ const services = t.raw('services') as string[];
       <p className="text-ink-muted whitespace-pre-line">{t('terraceText')}</p>
     </Reveal>
     <Reveal delay={0.1}>
-      <div className="relative aspect-[4/3]">
-        <Image src={IMG.colazione} alt={t('terraceImgAlt')} fill sizes="(max-width:768px) 100vw, 50vw" className="object-cover" />
-      </div>
+      <Gallery slides={balcone} className="aspect-[4/3] w-full" />
     </Reveal>
   </Container>
 </Section>
