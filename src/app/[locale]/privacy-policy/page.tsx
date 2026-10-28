@@ -3,8 +3,9 @@ import type { Metadata } from 'next';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { PrivacyIt } from '@/content/privacy/it';
 import { PrivacyEn } from '@/content/privacy/en';
+import { SITE } from '@/lib/site';
 
-const SITE_URL = 'https://www.dimoradelfunaro.it';
+const SITE_URL = SITE.url;
 
 type Props = { params: Promise<{ locale: string }> };
 
