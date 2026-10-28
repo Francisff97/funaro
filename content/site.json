@@ -1,0 +1,24 @@
+{
+  "name": "Dimora del Funaro",
+  "url": "https://www.dimoradelfunaro.it",
+  "contacts": {
+    "phone": "+39 349 426 2518",
+    "whatsapp": "+39 349 426 2518",
+    "email": "info@dimoradelfunaro.it"
+  },
+  "address": {
+    "street": "Via Ripa Serancia, 31",
+    "city": "Orvieto",
+    "province": "TR",
+    "postalCode": "05018",
+    "country": "IT",
+    "lat": 42.7185,
+    "lng": 12.1077
+  },
+  "priceFrom": 150,
+  "currency": "EUR",
+  "sister": {
+    "name": "Torre Polidori",
+    "url": "https://www.torrepolidoriorvieto.it"
+  }
+}
