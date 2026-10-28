@@ -1,0 +1,77 @@
+{
+  "$comment": "Letto dal pannello 'Testi siti' del Gestionale FD: quali file del repo sono modificabili e come mostrarli. Il resto del codice non si tocca.",
+  "site": "Dimora del Funaro",
+  "branch": "main",
+  "files": [
+    {
+      "path": "messages/it.json",
+      "label": "Testi del sito",
+      "kind": "translations",
+      "locale": "it",
+      "pairWith": "messages/en.json",
+      "fields": {
+        "nav": "Menu",
+        "notFound": "Pagina 404",
+        "footer": "Footer",
+        "home": "Home",
+        "apartment": "Appartamento",
+        "about": "Chi siamo",
+        "offers": "Offerte",
+        "contact": "Contatti",
+        "seo": "SEO · titoli e descrizioni per Google",
+        "mobileBar": "Barra mobile",
+        "privacy": "Privacy"
+      },
+      "fixedLists": [
+        "home.gallery",
+        "apartment.gallery",
+        "apartment.balconyGallery",
+        "about.detailAlts"
+      ]
+    },
+    {
+      "path": "messages/en.json",
+      "label": "Testi del sito (inglese)",
+      "kind": "translations",
+      "locale": "en",
+      "pairWith": "messages/it.json",
+      "fixedLists": [
+        "home.gallery",
+        "apartment.gallery",
+        "apartment.balconyGallery",
+        "about.detailAlts"
+      ]
+    },
+    {
+      "path": "content/site.json",
+      "label": "Dati della struttura",
+      "kind": "data",
+      "fields": {
+        "name": "Nome della struttura",
+        "url": "Indirizzo del sito",
+        "contacts": "Contatti",
+        "contacts.phone": "Telefono (come va mostrato)",
+        "contacts.whatsapp": "Numero WhatsApp",
+        "contacts.email": "Email",
+        "address": "Indirizzo",
+        "address.street": "Via e numero",
+        "address.city": "Città",
+        "address.province": "Provincia",
+        "address.postalCode": "CAP",
+        "address.country": "Paese (sigla)",
+        "address.lat": "Latitudine",
+        "address.lng": "Longitudine",
+        "priceFrom": "Prezzo a partire da (€ a notte)",
+        "currency": "Valuta",
+        "sister": "Struttura gemella",
+        "sister.name": "Nome",
+        "sister.url": "Sito"
+      },
+      "validate": {
+        "contacts.email": "^[^@\\s]+@[^@\\s]+\\.[^@\\s]+$",
+        "url": "^https://",
+        "sister.url": "^https://"
+      }
+    }
+  ]
+}

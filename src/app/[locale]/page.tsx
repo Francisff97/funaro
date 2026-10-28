@@ -132,7 +132,7 @@ export default async function Home({ params }: Props) {
         <Container className="grid md:grid-cols-2 gap-12 py-20 md:py-28 items-center">
           <Reveal>
             <div className="relative aspect-[4/3]">
-              <Image src="/images/catia.jpg" alt="Catia — accoglienza a Dimora del Funaro" fill sizes="(max-width:768px) 100vw, 50vw" className="object-cover" />
+              <Image src="/images/catia.jpg" alt={t('catiaAlt')} fill sizes="(max-width:768px) 100vw, 50vw" className="object-cover" />
             </div>
           </Reveal>
           <Reveal delay={0.1}>

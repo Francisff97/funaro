@@ -57,12 +57,12 @@ export default async function Contact({ params }: Props) {
               <p className="whitespace-pre-line text-ink-muted">{t('checkinText')}</p>
             </div>
           <MapEmbed
-            src="https://www.google.com/maps?q=Via+Ripa+Serancia+31+Orvieto&output=embed"
+            src={SITE.mapsEmbed}
             title={t('map.title')}
             note={t('map.note')}
             loadLabel={t('map.load')}
             openLabel={t('map.open')}
-            openHref="https://maps.google.com/?q=Via+Ripa+Serancia+31+Orvieto+TR"
+            openHref={SITE.mapsUrl}
           />
           </div>
         </Container>

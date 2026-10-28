@@ -1,8 +1,9 @@
 import { getTranslations } from 'next-intl/server';
 import { Link } from '@/i18n/navigation';
+import { SITE } from '@/lib/site';
 
-const PHONE = '+393494262518';
-const MAPS = 'https://maps.google.com/?q=Via+Ripa+Serancia+Orvieto+TR';
+const PHONE = SITE.phoneRaw;
+const MAPS = SITE.mapsUrl;
 
 const svg = 'h-6 w-6';
 const stroke = {
@@ -28,7 +29,7 @@ export async function MobileActionBar() {
         <span className={label}>{t('call')}</span>
       </a>
 
-      <Link href="mailto:info@dimoradelfunaro.it" className={`${cell} border-r border-cream/15`}>
+      <Link href={`mailto:${SITE.email}`} className={`${cell} border-r border-cream/15`}>
         <svg viewBox="0 0 24 24" className={svg} {...stroke}>
           <path d="M4 10v8a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-8" />
           <path d="M4 10.5l8 5 8-5" />
